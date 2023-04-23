@@ -47,6 +47,10 @@ app.get('/l/:lang', (req, res) => {
     }
 });
 
+app.get('/res/*', (req, res) => {
+    res.sendFile(`${__dirname}${req.path}`);
+});
+
 app.get('*', (req, res) => {
     res.render('404', {
             title: '404 / Esoterpreter'
