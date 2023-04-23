@@ -1,0 +1,12 @@
+{
+    "brainfuck": {
+        "name": "Brainfuck",
+        "wiki": "https://esolangs.org/wiki/Brainfuck",
+        "helloworld": "++++++++[>++++[>++>+++>+++>+<<<<-]>+>+>->>+[<]<-]>>.>---.+++++++..+++.>>.<-.<.+++.------.--------.>>+.>++."
+    },
+    "deadfish": {
+        "name": "Deadfish",
+        "wiki": "https://esolangs.org/wiki/Deadfish",
+        "helloworld": "iiisdsiiiiiiiioiiiiiiiiiiiiiiiiiiiiiiiiiiiiioiiiiiiiooiiiodddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddoddddddddddddodddddddddddddddddddddsddoddddddddoiiioddddddoddddddddodddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddo"
+    }
+}

@@ -1,0 +1,65 @@
+<style>
+    textarea {
+        width: 100%;
+        resize: vertical;
+        font-size: large;
+        color: black;
+    }
+
+    #button {
+        vertical-align: middle;
+        color: black;
+        font-size: 1em;
+        height: 3em;
+        width: 6em;
+    }
+
+    .left {
+        float: left;
+    }
+
+    .right {
+        float: right;
+    }
+</style>
+<script>
+    function output(string) {
+        var output = document.getElementById('output');
+        output.value += string;
+        updateHeight(output);
+    }
+
+    function clearOutput() {
+        document.getElementById('output').value = "";
+    }
+
+    function loadProgram(program) {
+        if(program == "helloworld") {
+            var code = document.getElementById('code');
+            code.value = "<%- helloworld %>";
+            updateHeight(code);
+        }
+    }
+
+    function updateHeight(object) {
+        object.style.height = '';
+        object.style.height = object.scrollHeight + 'px';
+    }
+</script>
+<script type="application/javascript" src="../res/interpreters/<%- langid %>.js"></script>
+<div style="display:grid">
+    <div>
+        <a href="<%- wiki %>"><h1 class="left"><%- name %></h1></a>
+        <button id="button" class="right" onclick="execute(document.getElementById('code').value, document.getElementById('input').value, console)">Run</button>
+        <button id="button" class="right" onclick="loadProgram('helloworld')">Hello World</button>
+    </div>
+    <div>
+        Code
+        <textarea id="code" oninput="updateHeight(this)"></textarea>
+        Input
+        <textarea id="input" oninput="updateHeight(this)"></textarea>
+        Output
+        <textarea id="output" readonly></textarea>
+    </div>
+</div>
+    

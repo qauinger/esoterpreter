@@ -1,0 +1,15 @@
+<style>
+    #lang-list {
+        list-style: none;
+        padding-left: 0px;
+    }
+</style>
+
+<h1>Welcome to qauinger's Esoterpreter!</h1>
+<h3>Please select a language:</h3>
+<ol id="lang-list">
+    <% Object.keys(langs).forEach(lang => { %>
+        <% var info = langs[lang]; %>
+        <li><h4><a href="https://qauinger.com/esoterpreter/l/<%= lang %>"><%= info['name'] %></a></h4></li>
+    <% }); %>
+</ol>
